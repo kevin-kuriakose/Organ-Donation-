@@ -55,5 +55,6 @@
       "allowed": "Organ Donation Manager",
       "allow_self_approval": 1
     }
-  ]
+  ],
+  "name": "Organ Match Approval"
 }

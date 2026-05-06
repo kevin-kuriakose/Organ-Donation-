@@ -6,7 +6,12 @@
   "module": "Organ Donation",
   "is_standard": "Yes",
   "roles": [
-    { "role": "Organ Donation Manager" },
-    { "role": "Transplant Coordinator" }
-  ]
+    {
+      "role": "Organ Donation Manager"
+    },
+    {
+      "role": "Transplant Coordinator"
+    }
+  ],
+  "name": "Donor Summary"
 }

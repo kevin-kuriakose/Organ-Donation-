@@ -6,8 +6,15 @@
   "module": "Organ Donation",
   "is_standard": "Yes",
   "roles": [
-    { "role": "Organ Donation Manager" },
-    { "role": "Transplant Coordinator" },
-    { "role": "Hospital Admin" }
-  ]
+    {
+      "role": "Organ Donation Manager"
+    },
+    {
+      "role": "Transplant Coordinator"
+    },
+    {
+      "role": "Hospital Admin"
+    }
+  ],
+  "name": "Recipient Waiting List"
 }
