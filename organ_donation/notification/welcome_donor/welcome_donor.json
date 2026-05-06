@@ -1,0 +1,12 @@
+{
+  "doctype": "Notification",
+  "name": "Welcome Donor",
+  "document_type": "Donor",
+  "event": "New",
+  "subject": "Welcome to Organ Donation Trust, {{ doc.donor_name }}!",
+  "message": "<p>Dear {{ doc.donor_name }},</p>\n<p>Thank you for registering with <strong>Organ Donation Trust</strong>. Your generosity gives the gift of life.</p>\n<p>Your Donor ID is <strong>{{ doc.name }}</strong>.</p>\n<p>Please log in to complete your Organ Pledge and update your profile.</p>\n<p>With gratitude,<br>Organ Donation Trust Team</p>",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    { "receiver_by_document_field": "email" }
+  ]
+}

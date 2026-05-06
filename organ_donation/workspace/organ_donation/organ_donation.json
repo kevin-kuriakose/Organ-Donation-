@@ -1,0 +1,42 @@
+{
+  "doctype": "Workspace",
+  "name": "Organ Donation",
+  "label": "Organ Donation",
+  "title": "Organ Donation",
+  "icon": "❤️",
+  "module": "Organ Donation",
+  "public": 1,
+  "is_standard": 1,
+  "is_hidden": 0,
+  "is_default": 0,
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "hide_custom": 0,
+  "sequence_id": 11,
+  "charts": [],
+  "shortcuts": [
+    {"label": "Donor", "type": "DocType", "doc_view": "List", "link_to": "Donor"},
+    {"label": "Recipient", "type": "DocType", "doc_view": "List", "link_to": "Recipient"},
+    {"label": "Organ Match", "type": "DocType", "doc_view": "List", "link_to": "Organ Match"},
+    {"label": "Transplant Log", "type": "DocType", "doc_view": "List", "link_to": "Transplant Log"}
+  ],
+  "content": "[{\"type\":\"card\",\"data\":{\"card_name\":\"Registration\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Clinical Process\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":12}}]",
+  "links": [
+    {"label": "Registration", "type": "Card Break"},
+    {"label": "Donor", "link_to": "Donor", "link_type": "DocType", "type": "Link", "onboard": 1},
+    {"label": "Recipient", "link_to": "Recipient", "link_type": "DocType", "type": "Link", "onboard": 1},
+    {"label": "Organ Pledge", "link_to": "Organ Pledge", "link_type": "DocType", "type": "Link", "onboard": 1},
+    {"label": "Hospital", "link_to": "Hospital", "link_type": "DocType", "type": "Link", "onboard": 1},
+
+    {"label": "Clinical Process", "type": "Card Break"},
+    {"label": "Brain Death Certificate", "link_to": "Brain Death Certificate", "link_type": "DocType", "type": "Link"},
+    {"label": "Family Consent", "link_to": "Family Consent", "link_type": "DocType", "type": "Link"},
+    {"label": "Organ Match", "link_to": "Organ Match", "link_type": "DocType", "type": "Link"},
+    {"label": "Transplant Log", "link_to": "Transplant Log", "link_type": "DocType", "type": "Link"},
+
+    {"label": "Reports", "type": "Card Break"},
+    {"label": "Donor Summary", "link_to": "Donor Summary", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Recipient Waiting List", "link_to": "Recipient Waiting List", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Organ Match Report", "link_to": "Organ Match Report", "link_type": "Report", "is_query_report": 1, "type": "Link"}
+  ]
+}

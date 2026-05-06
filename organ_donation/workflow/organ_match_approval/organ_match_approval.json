@@ -1,0 +1,59 @@
+{
+  "doctype": "Workflow",
+  "workflow_name": "Organ Match Approval",
+  "document_type": "Organ Match",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "states": [
+    {
+      "state": "Proposed",
+      "doc_status": "0",
+      "allow_edit": "Transplant Coordinator"
+    },
+    {
+      "state": "Under Review",
+      "doc_status": "0",
+      "allow_edit": "Organ Donation Manager"
+    },
+    {
+      "state": "Approved",
+      "doc_status": "1",
+      "allow_edit": "Organ Donation Manager"
+    },
+    {
+      "state": "Rejected",
+      "doc_status": "2",
+      "allow_edit": "Organ Donation Manager"
+    }
+  ],
+  "transitions": [
+    {
+      "state": "Proposed",
+      "action": "Send for Review",
+      "next_state": "Under Review",
+      "allowed": "Transplant Coordinator",
+      "allow_self_approval": 0
+    },
+    {
+      "state": "Under Review",
+      "action": "Approve",
+      "next_state": "Approved",
+      "allowed": "Organ Donation Manager",
+      "allow_self_approval": 1
+    },
+    {
+      "state": "Under Review",
+      "action": "Reject",
+      "next_state": "Rejected",
+      "allowed": "Organ Donation Manager",
+      "allow_self_approval": 1
+    },
+    {
+      "state": "Rejected",
+      "action": "Reopen",
+      "next_state": "Proposed",
+      "allowed": "Organ Donation Manager",
+      "allow_self_approval": 1
+    }
+  ]
+}

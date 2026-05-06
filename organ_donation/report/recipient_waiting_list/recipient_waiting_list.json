@@ -1,0 +1,13 @@
+{
+  "doctype": "Report",
+  "report_name": "Recipient Waiting List",
+  "report_type": "Script Report",
+  "ref_doctype": "Recipient",
+  "module": "Organ Donation",
+  "is_standard": "Yes",
+  "roles": [
+    { "role": "Organ Donation Manager" },
+    { "role": "Transplant Coordinator" },
+    { "role": "Hospital Admin" }
+  ]
+}

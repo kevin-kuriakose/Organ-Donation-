@@ -1,0 +1,25 @@
+{
+  "doctype": "DocType",
+  "name": "Organ Match",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "options": "Donor"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "options": "Recipient"
+    },
+    {
+      "fieldname": "organ",
+      "fieldtype": "Select"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select"
+    }
+  ]
+}

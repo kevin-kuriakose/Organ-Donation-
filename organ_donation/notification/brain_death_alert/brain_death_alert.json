@@ -1,0 +1,13 @@
+{
+  "doctype": "Notification",
+  "name": "Brain Death Alert",
+  "document_type": "Brain Death Certificate",
+  "event": "Submit",
+  "subject": "🚨 Brain Death Certified – Donor {{ doc.donor }} | Immediate Action Required",
+  "message": "<p>A Brain Death Certificate has been submitted.</p>\n<p><strong>Donor:</strong> {{ doc.donor }}<br>\n<strong>Hospital:</strong> {{ doc.hospital }}<br>\n<strong>Certified By:</strong> {{ doc.certified_by }}<br>\n<strong>Date/Time:</strong> {{ doc.date }}</p>\n<p>Please initiate the Family Consent process immediately.</p>",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    { "receiver_by_role": "Transplant Coordinator" },
+    { "receiver_by_role": "Organ Donation Manager" }
+  ]
+}

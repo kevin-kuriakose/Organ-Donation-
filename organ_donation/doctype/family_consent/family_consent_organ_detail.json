@@ -1,0 +1,29 @@
+{
+  "doctype": "DocType",
+  "name": "Family Consent Organ Detail",
+  "module": "Organ Donation",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "organ",
+      "fieldtype": "Select",
+      "label": "Organ",
+      "options": "Heart\nLiver\nKidney\nLungs\nPancreas\nIntestine\nCornea\nSkin\nBone Marrow",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "consented",
+      "fieldtype": "Check",
+      "label": "Consented",
+      "default": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "remarks",
+      "fieldtype": "Data",
+      "label": "Remarks",
+      "in_list_view": 1
+    }
+  ]
+}

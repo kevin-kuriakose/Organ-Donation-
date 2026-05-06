@@ -1,0 +1,14 @@
+{
+  "doctype": "Notification",
+  "name": "Transplant Successful",
+  "document_type": "Transplant Log",
+  "event": "Submit",
+  "condition": "doc.outcome == 'Successful'",
+  "subject": "✅ Transplant Successful – {{ doc.organ }} | {{ doc.name }}",
+  "message": "<p>A transplant has been successfully completed.</p>\n<p><strong>Log ID:</strong> {{ doc.name }}<br>\n<strong>Organ:</strong> {{ doc.organ }}<br>\n<strong>Donor:</strong> {{ doc.donor }}<br>\n<strong>Recipient:</strong> {{ doc.recipient }}<br>\n<strong>Hospital:</strong> {{ doc.transplant_hospital }}<br>\n<strong>Date:</strong> {{ doc.transplant_date }}</p>\n<p>Kindly update the follow-up schedule for the recipient.</p>",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    { "receiver_by_role": "Transplant Coordinator" },
+    { "receiver_by_role": "Organ Donation Manager" }
+  ]
+}

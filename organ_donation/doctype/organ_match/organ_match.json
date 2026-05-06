@@ -1,0 +1,148 @@
+{
+  "doctype": "DocType",
+  "name": "Organ Match",
+  "module": "Organ Donation",
+  "naming_rule": "Expression",
+  "autoname": "naming_series:",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "title_field": "organ",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "OM-.YYYY.-.####",
+      "default": "OM-.YYYY.-.####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "organ",
+      "fieldtype": "Select",
+      "label": "Organ",
+      "options": "\nHeart\nLiver\nKidney\nLungs\nPancreas\nIntestine\nCornea\nSkin\nBone Marrow",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "match_date",
+      "fieldtype": "Datetime",
+      "label": "Match Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_donor",
+      "fieldtype": "Section Break",
+      "label": "Donor"
+    },
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "label": "Donor",
+      "options": "Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "donor_hospital",
+      "fieldtype": "Link",
+      "label": "Donor Hospital",
+      "options": "Hospital",
+      "fetch_from": "donor.hospital"
+    },
+    {
+      "fieldname": "col_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "recipient_hospital",
+      "fieldtype": "Link",
+      "label": "Recipient Hospital",
+      "options": "Hospital",
+      "fetch_from": "recipient.hospital"
+    },
+    {
+      "fieldname": "section_medical",
+      "fieldtype": "Section Break",
+      "label": "Medical Compatibility"
+    },
+    {
+      "fieldname": "blood_group_match",
+      "fieldtype": "Check",
+      "label": "Blood Group Compatible",
+      "read_only": 1
+    },
+    {
+      "fieldname": "hla_match_score",
+      "fieldtype": "Float",
+      "label": "HLA Match Score (%)"
+    },
+    {
+      "fieldname": "col_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "crossmatch_result",
+      "fieldtype": "Select",
+      "label": "Crossmatch Result",
+      "options": "\nNegative (Compatible)\nPositive (Incompatible)\nPending"
+    },
+    {
+      "fieldname": "cold_ischemia_time",
+      "fieldtype": "Int",
+      "label": "Max Cold Ischemia Time (Hours)"
+    },
+    {
+      "fieldname": "section_status",
+      "fieldtype": "Section Break",
+      "label": "Match Status"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Proposed\nApproved\nRejected\nTransplanted\nFailed",
+      "default": "Proposed",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "rejection_reason",
+      "fieldtype": "Data",
+      "label": "Rejection Reason",
+      "depends_on": "eval:doc.status=='Rejected'"
+    },
+    {
+      "fieldname": "section_notes",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Clinical Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Organ Donation Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1
+    },
+    {
+      "role": "Transplant Coordinator",
+      "read": 1, "write": 1, "create": 1, "submit": 1
+    },
+    {
+      "role": "Hospital Admin",
+      "read": 1
+    }
+  ]
+}

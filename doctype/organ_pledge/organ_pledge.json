@@ -1,0 +1,16 @@
+{
+  "doctype": "DocType",
+  "name": "Organ Pledge",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "options": "Donor"
+    },
+    {
+      "fieldname": "organ",
+      "fieldtype": "Select"
+    }
+  ]
+}

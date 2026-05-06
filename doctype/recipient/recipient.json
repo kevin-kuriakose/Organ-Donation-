@@ -1,0 +1,19 @@
+{
+  "doctype": "DocType",
+  "name": "Recipient",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "patient_name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "required_organ",
+      "fieldtype": "Select"
+    },
+    {
+      "fieldname": "urgency",
+      "fieldtype": "Select"
+    }
+  ]
+}

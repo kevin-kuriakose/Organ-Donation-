@@ -1,0 +1,130 @@
+{
+  "doctype": "DocType",
+  "name": "Hospital",
+  "module": "Organ Donation",
+  "naming_rule": "By fieldname",
+  "autoname": "field:hospital_name",
+  "title_field": "hospital_name",
+  "search_fields": "hospital_name,state,city",
+  "fields": [
+    {
+      "fieldname": "hospital_name",
+      "fieldtype": "Data",
+      "label": "Hospital Name",
+      "reqd": 1,
+      "in_list_view": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "hospital_type",
+      "fieldtype": "Select",
+      "label": "Hospital Type",
+      "options": "\nGovernment\nPrivate\nTrust / NGO",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transplant_center",
+      "fieldtype": "Check",
+      "label": "Designated Transplant Centre",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "col_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Data",
+      "label": "State",
+      "reqd": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "label": "City"
+    },
+    {
+      "fieldname": "pincode",
+      "fieldtype": "Data",
+      "label": "PIN Code"
+    },
+    {
+      "fieldname": "section_contact",
+      "fieldtype": "Section Break",
+      "label": "Contact"
+    },
+    {
+      "fieldname": "contact_person",
+      "fieldtype": "Data",
+      "label": "Transplant Coordinator Name"
+    },
+    {
+      "fieldname": "contact_email",
+      "fieldtype": "Data",
+      "label": "Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "col_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "contact_phone",
+      "fieldtype": "Data",
+      "label": "Phone",
+      "options": "Phone"
+    },
+    {
+      "fieldname": "website",
+      "fieldtype": "Data",
+      "label": "Website",
+      "options": "URL"
+    },
+    {
+      "fieldname": "section_accreditation",
+      "fieldtype": "Section Break",
+      "label": "Accreditation"
+    },
+    {
+      "fieldname": "notto_registered",
+      "fieldtype": "Check",
+      "label": "Registered with NOTTO"
+    },
+    {
+      "fieldname": "notto_registration_number",
+      "fieldtype": "Data",
+      "label": "NOTTO Registration Number"
+    },
+    {
+      "fieldname": "col_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "rotto_zone",
+      "fieldtype": "Select",
+      "label": "ROTTO Zone",
+      "options": "\nNorth\nSouth\nEast\nWest\nCentral"
+    },
+    {
+      "fieldname": "active",
+      "fieldtype": "Check",
+      "label": "Active",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Organ Donation Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1
+    },
+    {
+      "role": "Transplant Coordinator",
+      "read": 1, "write": 1, "create": 1
+    },
+    {
+      "role": "Hospital Admin",
+      "read": 1
+    }
+  ]
+}

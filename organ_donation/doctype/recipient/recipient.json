@@ -1,0 +1,142 @@
+{
+  "doctype": "DocType",
+  "name": "Recipient",
+  "module": "Organ Donation",
+  "naming_rule": "Expression",
+  "autoname": "naming_series:",
+  "is_submittable": 0,
+  "track_changes": 1,
+  "title_field": "patient_name",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "RCP-.YYYY.-.####",
+      "default": "RCP-.YYYY.-.####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_personal",
+      "fieldtype": "Section Break",
+      "label": "Patient Details"
+    },
+    {
+      "fieldname": "patient_name",
+      "fieldtype": "Data",
+      "label": "Patient Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "patient_link",
+      "fieldtype": "Link",
+      "label": "Patient (ERPNext Healthcare)",
+      "options": "Patient"
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "\nMale\nFemale\nOther"
+    },
+    {
+      "fieldname": "col_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-",
+      "reqd": 1
+    },
+    {
+      "fieldname": "mobile",
+      "fieldtype": "Data",
+      "label": "Mobile",
+      "options": "Phone"
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Treating Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "section_medical",
+      "fieldtype": "Section Break",
+      "label": "Medical Requirement"
+    },
+    {
+      "fieldname": "required_organ",
+      "fieldtype": "Select",
+      "label": "Required Organ",
+      "options": "\nHeart\nLiver\nKidney\nLungs\nPancreas\nIntestine\nCornea\nSkin\nBone Marrow",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "urgency",
+      "fieldtype": "Select",
+      "label": "Urgency Level",
+      "options": "Routine\nUrgent\nSuper Urgent",
+      "default": "Routine",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "col_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "waitlist_date",
+      "fieldtype": "Date",
+      "label": "Waitlist Date",
+      "default": "Today"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Waiting\nMatched\nTransplanted\nDeceased\nRemoved",
+      "default": "Waiting",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "section_notes",
+      "fieldtype": "Section Break",
+      "label": "Clinical Notes"
+    },
+    {
+      "fieldname": "clinical_notes",
+      "fieldtype": "Text Editor",
+      "label": "Clinical Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Organ Donation Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1
+    },
+    {
+      "role": "Transplant Coordinator",
+      "read": 1, "write": 1, "create": 1
+    },
+    {
+      "role": "Hospital Admin",
+      "read": 1
+    }
+  ],
+  "links": [
+    { "link_doctype": "Organ Match",    "link_fieldname": "recipient" },
+    { "link_doctype": "Transplant Log", "link_fieldname": "recipient" }
+  ]
+}

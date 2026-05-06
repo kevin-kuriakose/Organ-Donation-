@@ -1,0 +1,12 @@
+{
+  "doctype": "Report",
+  "report_name": "Organ Match Report",
+  "report_type": "Script Report",
+  "ref_doctype": "Organ Match",
+  "module": "Organ Donation",
+  "is_standard": "Yes",
+  "roles": [
+    { "role": "Organ Donation Manager" },
+    { "role": "Transplant Coordinator" }
+  ]
+}

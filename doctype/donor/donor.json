@@ -1,0 +1,23 @@
+{
+  "doctype": "DocType",
+  "name": "Donor",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "donor_name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select"
+    },
+    {
+      "fieldname": "aadhaar",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select"
+    }
+  ]
+}

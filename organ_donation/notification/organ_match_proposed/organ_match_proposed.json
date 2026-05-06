@@ -1,0 +1,13 @@
+{
+  "doctype": "Notification",
+  "name": "Organ Match Proposed",
+  "document_type": "Organ Match",
+  "event": "New",
+  "subject": "New Organ Match Proposed – {{ doc.organ }} | {{ doc.name }}",
+  "message": "<p>A new organ match has been proposed.</p>\n<p><strong>Match ID:</strong> {{ doc.name }}<br>\n<strong>Organ:</strong> {{ doc.organ }}<br>\n<strong>Donor:</strong> {{ doc.donor }}<br>\n<strong>Recipient:</strong> {{ doc.recipient }}<br>\n<strong>Blood Group Compatible:</strong> {{ 'Yes' if doc.blood_group_match else 'No' }}</p>\n<p>Please review and approve or reject this match at the earliest.</p>",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    { "receiver_by_role": "Transplant Coordinator" },
+    { "receiver_by_role": "Organ Donation Manager" }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "doctype": "DocType",
+  "name": "Organ Pledge",
+  "module": "Organ Donation",
+  "naming_rule": "Expression",
+  "autoname": "naming_series:",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "title_field": "donor",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "PLG-.YYYY.-.####",
+      "default": "PLG-.YYYY.-.####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "label": "Donor",
+      "options": "Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pledge_date",
+      "fieldtype": "Date",
+      "label": "Pledge Date",
+      "default": "Today",
+      "reqd": 1
+    },
+    {
+      "fieldname": "col_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "pledge_status",
+      "fieldtype": "Select",
+      "label": "Pledge Status",
+      "options": "Active\nWithdrawn\nFulfilled\nExpired",
+      "default": "Active",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_organs",
+      "fieldtype": "Section Break",
+      "label": "Organs Pledged"
+    },
+    {
+      "fieldname": "organ",
+      "fieldtype": "Select",
+      "label": "Primary Organ",
+      "options": "\nHeart\nLiver\nKidney\nLungs\nPancreas\nIntestine\nCornea\nSkin\nBone Marrow\nAll Organs",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organs_table",
+      "fieldtype": "Table",
+      "label": "Additional Organs",
+      "options": "Organ Pledge Detail"
+    },
+    {
+      "fieldname": "section_legal",
+      "fieldtype": "Section Break",
+      "label": "Legal & Consent"
+    },
+    {
+      "fieldname": "consent_given",
+      "fieldtype": "Check",
+      "label": "Donor has given informed consent",
+      "reqd": 1
+    },
+    {
+      "fieldname": "witness_name",
+      "fieldtype": "Data",
+      "label": "Witness Name"
+    },
+    {
+      "fieldname": "col_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "pledge_card_issued",
+      "fieldtype": "Check",
+      "label": "Pledge Card Issued"
+    },
+    {
+      "fieldname": "pledge_card_number",
+      "fieldtype": "Data",
+      "label": "Pledge Card Number"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Organ Donation Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1
+    },
+    {
+      "role": "Transplant Coordinator",
+      "read": 1, "write": 1, "create": 1, "submit": 1
+    }
+  ]
+}

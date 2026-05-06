@@ -1,0 +1,121 @@
+{
+  "doctype": "DocType",
+  "name": "Family Consent",
+  "module": "Organ Donation",
+  "naming_rule": "Expression",
+  "autoname": "naming_series:",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "title_field": "donor",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "FC-.YYYY.-.####",
+      "default": "FC-.YYYY.-.####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "label": "Donor",
+      "options": "Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "brain_death_certificate",
+      "fieldtype": "Link",
+      "label": "Brain Death Certificate",
+      "options": "Brain Death Certificate"
+    },
+    {
+      "fieldname": "col_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "consent_date",
+      "fieldtype": "Datetime",
+      "label": "Consent Date & Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "consent_given",
+      "fieldtype": "Select",
+      "label": "Consent Given",
+      "options": "Yes\nNo\nPartial",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_family",
+      "fieldtype": "Section Break",
+      "label": "Family Member Details"
+    },
+    {
+      "fieldname": "consent_by",
+      "fieldtype": "Data",
+      "label": "Consented By (Name)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "relation",
+      "fieldtype": "Select",
+      "label": "Relation to Donor",
+      "options": "\nSpouse\nParent\nChild\nSibling\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "col_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "consent_member_mobile",
+      "fieldtype": "Data",
+      "label": "Mobile Number",
+      "options": "Phone"
+    },
+    {
+      "fieldname": "witness",
+      "fieldtype": "Data",
+      "label": "Witness Name"
+    },
+    {
+      "fieldname": "counselor",
+      "fieldtype": "Data",
+      "label": "Counselor / Transplant Coordinator"
+    },
+    {
+      "fieldname": "section_organs",
+      "fieldtype": "Section Break",
+      "label": "Organs Consented For"
+    },
+    {
+      "fieldname": "consented_organs",
+      "fieldtype": "Table",
+      "label": "Consented Organs",
+      "options": "Family Consent Organ Detail"
+    },
+    {
+      "fieldname": "section_notes",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Counseling Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Organ Donation Manager",
+      "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1
+    },
+    {
+      "role": "Transplant Coordinator",
+      "read": 1, "write": 1, "create": 1, "submit": 1
+    }
+  ]
+}

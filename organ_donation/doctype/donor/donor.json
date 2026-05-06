@@ -1,0 +1,182 @@
+{
+  "doctype": "DocType",
+  "name": "Donor",
+  "module": "Organ Donation",
+  "naming_rule": "Expression",
+  "autoname": "naming_series:",
+  "is_submittable": 0,
+  "track_changes": 1,
+  "search_fields": "donor_name,blood_group,status",
+  "title_field": "donor_name",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "DON-.YYYY.-.####",
+      "default": "DON-.YYYY.-.####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_personal",
+      "fieldtype": "Section Break",
+      "label": "Personal Details"
+    },
+    {
+      "fieldname": "donor_name",
+      "fieldtype": "Data",
+      "label": "Donor Full Name",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "\nMale\nFemale\nOther"
+    },
+    {
+      "fieldname": "col_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "nationality",
+      "fieldtype": "Data",
+      "label": "Nationality",
+      "default": "Indian"
+    },
+    {
+      "fieldname": "religion",
+      "fieldtype": "Data",
+      "label": "Religion"
+    },
+    {
+      "fieldname": "section_contact",
+      "fieldtype": "Section Break",
+      "label": "Contact Details"
+    },
+    {
+      "fieldname": "mobile",
+      "fieldtype": "Data",
+      "label": "Mobile Number",
+      "options": "Phone"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "col_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Data",
+      "label": "State"
+    },
+    {
+      "fieldname": "section_id",
+      "fieldtype": "Section Break",
+      "label": "Identification"
+    },
+    {
+      "fieldname": "aadhaar",
+      "fieldtype": "Password",
+      "label": "Aadhaar Number"
+    },
+    {
+      "fieldname": "pan",
+      "fieldtype": "Data",
+      "label": "PAN Number"
+    },
+    {
+      "fieldname": "col_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Associated Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "registered_by",
+      "fieldtype": "Link",
+      "label": "Registered By",
+      "options": "User"
+    },
+    {
+      "fieldname": "section_status",
+      "fieldtype": "Section Break",
+      "label": "Donor Status"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Registered\nPledged\nBrain Dead\nConsented\nOrgan Harvested\nDeceased\nWithdrawn",
+      "default": "Registered",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "donor_type",
+      "fieldtype": "Select",
+      "label": "Donor Type",
+      "options": "Deceased\nLiving",
+      "default": "Deceased"
+    },
+    {
+      "fieldname": "section_notes",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Additional Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Organ Donation Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 0, "print": 1, "email": 1
+    },
+    {
+      "role": "Transplant Coordinator",
+      "read": 1, "write": 1, "create": 1, "delete": 0, "print": 1, "email": 1
+    },
+    {
+      "role": "Hospital Admin",
+      "read": 1, "write": 0, "create": 0
+    }
+  ],
+  "links": [
+    { "link_doctype": "Organ Pledge",           "link_fieldname": "donor" },
+    { "link_doctype": "Brain Death Certificate","link_fieldname": "donor" },
+    { "link_doctype": "Family Consent",         "link_fieldname": "donor" },
+    { "link_doctype": "Organ Match",            "link_fieldname": "donor" },
+    { "link_doctype": "Transplant Log",         "link_fieldname": "donor" }
+  ]
+}

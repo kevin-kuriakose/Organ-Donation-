@@ -1,0 +1,19 @@
+{
+  "doctype": "DocType",
+  "name": "Brain Death Certificate",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "patient",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "certified_by",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "date",
+      "fieldtype": "Datetime"
+    }
+  ]
+}

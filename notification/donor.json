@@ -1,0 +1,6 @@
+{
+  "doctype": "Notification",
+  "document_type": "Donor",
+  "subject": "Welcome Donor",
+  "event": "New"
+}

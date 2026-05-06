@@ -1,0 +1,20 @@
+{
+  "doctype": "DocType",
+  "name": "Family Consent",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "options": "Donor"
+    },
+    {
+      "fieldname": "consent_by",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "relation",
+      "fieldtype": "Data"
+    }
+  ]
+}

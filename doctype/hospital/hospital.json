@@ -1,0 +1,15 @@
+{
+  "doctype": "DocType",
+  "name": "Hospital",
+  "module": "Organ Donation",
+  "fields": [
+    {
+      "fieldname": "hospital_name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Data"
+    }
+  ]
+}
